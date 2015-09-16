@@ -11,9 +11,9 @@ namespace splitByRows.Tests
 		[Test]
 		public void Main()
 		{
-			Program.Main(new string[]{@"Properties\AssemblyInfo.cs","-n:5"});
+			Program.Main(new []{@"Properties\AssemblyInfo.cs","-n:5",@"-d:.."});
 			Assert.AreEqual("using System.Runtime.InteropServices;",
-			                File.ReadAllLines(@"Properties\AssemblyInfo.cs.0")[4]);
+			                File.ReadAllLines(@"..\AssemblyInfo.cs.0")[4]);
 		}
 	}
 }
