@@ -14,6 +14,7 @@ namespace splitByRows
                                                 AppDomain.CurrentDomain.FriendlyName));
             else
             {
+                var filePath = args[0].Trim('\'').Trim('"');
                 var destDir = CommandLineArguments.OptionValue("d", args);
                 if (!string.IsNullOrEmpty(destDir))
                 {
@@ -25,7 +26,7 @@ namespace splitByRows
                 int fileIndex = 0;
                 int lineIndex = 0;
                 var lines = new List<string>();
-                foreach (var s in File.ReadAllLines(args[0].Trim('\'').Trim('"')))
+                foreach (var s in File.ReadAllLines(filePath))
                 {
                     lines.Add(s);
                     lineIndex++;
@@ -34,8 +35,8 @@ namespace splitByRows
                         File.WriteAllLines(string.Format("{0}{1}.{2}",
                                                          destDir,
                                                          string.IsNullOrEmpty(CommandLineArguments.OptionValue("d", args))
-                                                             ? args[0]
-                                                             : Path.GetFileName(args[0]),
+                                                             ? filePath
+                                                             : Path.GetFileName(filePath),
                                                          fileIndex),
                                            lines.ToArray());
                         fileIndex++;
