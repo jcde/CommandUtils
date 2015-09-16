@@ -1,8 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-# SharpDevelop 4.4
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "runas64", "runas64\runas64.csproj", "{3427D439-162F-442B-8031-5941F868EC6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "splitByRows", "splitByRows\splitByRows.csproj", "{C92C02C0-C4C2-4DE8-8B65-68A5BF2049EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumSite.DBCreateScript", "DBCreateScript\NumSite.DBCreateScript.csproj", "{DB5A313C-0686-46FA-A0C0-C9B072306264}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringUtils", "StringUtils\StringUtils.csproj", "{2899E3FE-5A0B-4C7B-81CC-F084FA7FA827}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,9 +15,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3427D439-162F-442B-8031-5941F868EC6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3427D439-162F-442B-8031-5941F868EC6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3427D439-162F-442B-8031-5941F868EC6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3427D439-162F-442B-8031-5941F868EC6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3427D439-162F-442B-8031-5941F868EC6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3427D439-162F-442B-8031-5941F868EC6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C92C02C0-C4C2-4DE8-8B65-68A5BF2049EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C92C02C0-C4C2-4DE8-8B65-68A5BF2049EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C92C02C0-C4C2-4DE8-8B65-68A5BF2049EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C92C02C0-C4C2-4DE8-8B65-68A5BF2049EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB5A313C-0686-46FA-A0C0-C9B072306264}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB5A313C-0686-46FA-A0C0-C9B072306264}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB5A313C-0686-46FA-A0C0-C9B072306264}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2899E3FE-5A0B-4C7B-81CC-F084FA7FA827}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2899E3FE-5A0B-4C7B-81CC-F084FA7FA827}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2899E3FE-5A0B-4C7B-81CC-F084FA7FA827}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2899E3FE-5A0B-4C7B-81CC-F084FA7FA827}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal

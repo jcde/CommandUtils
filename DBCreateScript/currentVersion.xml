@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<product name="NumSite.DBCreateScript" major="2" minor="0" build="0" revision="0">
+  <usesProduct name="Microsoft .Net Framework" major="3" minor="5" />
+  <joinedToProducts>
+    <joinedToProduct name="NumSite.Building" major="1" minor="0" />
+    <joinedToProduct name="NumSite.Building" major="1" minor="0" />
+  </joinedToProducts>
+</product>
