@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+# SharpDevelop 4.4
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "runas64", "runas64\runas64.csproj", "{3427D439-162F-442B-8031-5941F868EC6D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3427D439-162F-442B-8031-5941F868EC6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3427D439-162F-442B-8031-5941F868EC6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3427D439-162F-442B-8031-5941F868EC6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3427D439-162F-442B-8031-5941F868EC6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+EndGlobal
