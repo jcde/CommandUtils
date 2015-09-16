@@ -18,7 +18,7 @@ namespace splitByRows
                 var destDir = CommandLineArguments.OptionValue("d", args);
                 if (!string.IsNullOrEmpty(destDir))
                 {
-                    destDir = Path.Combine(Environment.CurrentDirectory, destDir + @"\");
+                    destDir = Path.Combine(Path.GetDirectoryName(filePath), destDir + @"\");
                     if (!Directory.Exists(destDir))
                         Directory.CreateDirectory(destDir);
                 }
