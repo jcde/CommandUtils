@@ -25,7 +25,7 @@ namespace splitByRows
                 int fileIndex = 0;
                 int lineIndex = 0;
                 var lines = new List<string>();
-                foreach (var s in File.ReadAllLines(args[0]))
+                foreach (var s in File.ReadAllLines(args[0].Trim('\'').Trim('"')))
                 {
                     lines.Add(s);
                     lineIndex++;
