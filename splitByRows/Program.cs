@@ -16,35 +16,46 @@ namespace splitByRows
             {
                 var filePath = args[0].Trim('\'').Trim('"');
                 var destDir = CommandLineArguments.OptionValue("d", args);
-                if (!string.IsNullOrEmpty(destDir))
+
+                Split(
+                    int.Parse(CommandLineArguments.OptionValue("n", args) ?? "100"), 
+                    destDir, 
+                    filePath);
+            }
+        }
+
+        internal static void Split(int byRowsQuantity, string destDir, string filePath)
+        {
+            if (!string.IsNullOrEmpty(destDir))
+            {
+                destDir = Path.Combine(Path.GetDirectoryName(filePath), destDir + @"\");
+                if (!Directory.Exists(destDir))
+                    Directory.CreateDirectory(destDir);
+            }
+
+            int fileIndex = 0;
+            int lineIndex = 0;
+            var lines = new List<string>();
+            string path = null;
+            foreach (var s in File.ReadAllLines(filePath))
+            {
+                lines.Add(s);
+                lineIndex++;
+                path = string.Format("{0}{1}.{2}",
+                                     destDir,
+                                     string.IsNullOrEmpty(destDir) ? filePath : Path.GetFileName(filePath),
+                                     fileIndex);
+                if (lineIndex >= byRowsQuantity)
                 {
-                    destDir = Path.Combine(Path.GetDirectoryName(filePath), destDir + @"\");
-                    if (!Directory.Exists(destDir))
-                        Directory.CreateDirectory(destDir);
-                }
-                var byRowsQuantity = int.Parse(CommandLineArguments.OptionValue("n", args) ?? "100");
-                int fileIndex = 0;
-                int lineIndex = 0;
-                var lines = new List<string>();
-                foreach (var s in File.ReadAllLines(filePath))
-                {
-                    lines.Add(s);
-                    lineIndex++;
-                    if (lineIndex >= byRowsQuantity)
-                    {
-                        File.WriteAllLines(string.Format("{0}{1}.{2}",
-                                                         destDir,
-                                                         string.IsNullOrEmpty(CommandLineArguments.OptionValue("d", args))
-                                                             ? filePath
-                                                             : Path.GetFileName(filePath),
-                                                         fileIndex),
-                                           lines.ToArray());
-                        fileIndex++;
-                        lineIndex = 0;
-                        lines = new List<string>();
-                    }
+                    File.WriteAllLines(path, lines.ToArray());
+                    fileIndex++;
+                    lineIndex = 0;
+                    lines.Clear();
                 }
             }
+
+            if (path != null)
+                File.WriteAllLines(path, lines.ToArray());
         }
     }
 }

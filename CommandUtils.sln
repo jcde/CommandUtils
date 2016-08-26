@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "runas64", "runas64\runas64.csproj", "{3427D439-162F-442B-8031-5941F868EC6D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "splitByRows", "splitByRows\splitByRows.csproj", "{C92C02C0-C4C2-4DE8-8B65-68A5BF2049EB}"

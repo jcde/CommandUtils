@@ -15,6 +15,13 @@ namespace splitByRows.Tests
 			Assert.AreEqual("using System.Runtime.InteropServices;",
 			                File.ReadAllLines(@"AssemblyInfo.cs.0")[4]);
 		}
+
+        [Test]
+        public void Split()
+        {
+            Program.Split(100, "splitted", "Tests\\_paccess.log");
+            Assert.AreEqual(2, Directory.GetFiles("Tests\\splitted").Length);
+        }
 	}
 }
 #endif
