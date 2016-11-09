@@ -1,5 +1,4 @@
 ﻿#if DEBUG
-using System;
 using NUnit.Framework;
 
 namespace runas64.Tests
